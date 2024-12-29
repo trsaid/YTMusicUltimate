@@ -63,7 +63,7 @@ jobs:
 
       - name: Prepare YouTube Music iPA
         id: prepare_youtube_music
-        run: wget "https://filebin.net/18zkaflsqwr5kgv0/YTMusicUltimate%20v2.3.deb" --no-verbose -O main/YouTubeMusic.ipa
+        run: wget "$YOUTUBE_MUSIC_URL" --no-verbose -O main/YouTubeMusic.ipa
 
         env:
           YOUTUBE_MUSIC_URL: ${{ inputs.decrypted_youtube_music_url }}    
